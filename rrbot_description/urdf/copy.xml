@@ -1,0 +1,569 @@
+<?xml version="1.0"?>
+<!-- Revolute-Revolute Manipulator -->
+<robot name="rrbot" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+  <!-- Constants for robot dimensions -->
+  <xacro:property name="PI" value="3.1415926535897931"/>
+  <xacro:property name="mass" value="1" /> <!-- arbitrary value for mass -->
+  <xacro:property name="width" value="0.1" /> <!-- Square dimensions (widthxwidth) of beams -->
+  <xacro:property name="height1" value="2" /> <!-- Link 1 -->
+  <xacro:property name="height2" value="1" /> <!-- Link 2 -->
+  <xacro:property name="height3" value="1" /> <!-- Link 3 -->
+  <xacro:property name="camera_link" value="0.05" /> <!-- Size of square 'camera' box -->
+  <xacro:property name="axel_offset" value="0.05" /> <!-- Space btw top of beam and the each joint -->
+
+  <!-- Import all Gazebo-customization elements, including Gazebo colors -->
+  <xacro:include filename="$(find rrbot_description)/urdf/rrbot.gazebo" />
+  <!-- Import Rviz colors -->
+  <xacro:include filename="$(find rrbot_description)/urdf/materials.xacro" />
+
+  <!-- measurements in 10 cm --> 
+
+  <!--Links @NEED TO ADD MASS PROPERTIES-->
+  <!-- BASE LINK -->
+  <link name = "base_link">
+    <visual>
+      <geometry>
+        <sphere radius="0.016989"/>
+      </geometry>
+      <!-- <origin xyz="0 0 0" rpy="0 0 0"/> -->
+    </visual>
+    <collision>
+      <geometry>
+        <sphere radius="0.016989"/>
+      </geometry>
+
+    </collision>
+
+    <inertial>
+      <origin xyz="0 0 0.01197737" rpy="0 0 0"/>
+      <mass value="0.04745029"/>
+      <inertia ixx="0.03542" ixy="0.0" ixz="0.0" iyy="0.03542" iyz="0.0" izz="0.02265"/>
+    </inertial>
+
+
+  </link>
+
+  <!-- PART 6 FOR 3 PORTIONS -->
+  <link name = "part_06">
+    <visual>
+      <geometry>
+        <cylinder length=".25718" radius=".00955"/>
+      </geometry> 
+      <origin xyz="0 0 -0.12859" rpy="0 0 0"/>
+    </visual>
+    <collision>
+      <geometry>
+        <cylinder length=".25718" radius=".00955"/>
+      </geometry> 
+      <origin xyz="0 0 -0.12859" rpy="0 0 0"/>
+    </collision>
+    <inertial>
+      <origin xyz="0.033638744 0.017351756 0.011676888" rpy="0 0 0"/>
+      <mass value="0.074253071"/>
+      <inertia ixx="1.03428" ixy="0.02083" ixz="0.20161" iyy="1.06391" iyz="0.10400" izz="0.32225"/>
+    </inertial>
+
+  </link>
+
+  <link name = "part_16">
+    <visual>
+      <geometry>
+        <cylinder length=".25718" radius=".00955"/>
+      </geometry> 
+      <origin xyz="0 0 -0.12859" rpy="0 0 0"/>
+    </visual>
+    <collision>
+      <geometry>
+        <cylinder length=".25718" radius=".00955"/>
+      </geometry> 
+      <origin xyz="0 0 -0.12859" rpy="0 0 0"/>
+    </collision>
+    <inertial>
+      <origin xyz="0.033638744 0.017351756 0.011676888" rpy="0 0 0"/>
+      <mass value="0.074253071"/>
+      <inertia ixx="1.03428" ixy="0.02083" ixz="0.20161" iyy="1.06391" iyz="0.10400" izz="0.32225"/>
+    </inertial>
+  </link>
+
+  <link name = "part_26">
+    <visual>
+      <geometry>
+        <cylinder length=".25718" radius=".00955"/>
+      </geometry> 
+      <origin xyz="0 0 -0.12859" rpy="0 0 0"/>
+    </visual>
+    <collision>
+      <geometry>
+        <cylinder length=".25718" radius=".00955"/>
+      </geometry> 
+      <origin xyz="0 0 -0.12859" rpy="0 0 0"/>
+    </collision>
+    <inertial>
+      <origin xyz="0.033638744 0.017351756 0.011676888" rpy="0 0 0"/>
+      <mass value="0.074253071"/>
+      <inertia ixx="1.03428" ixy="0.02083" ixz="0.20161" iyy="1.06391" iyz="0.10400" izz="0.32225"/>
+    </inertial>
+  </link>
+
+  <!-- PART 5 FOR 3 PORTIONS-->
+
+  <link name ="part_05">
+    <visual>
+      <geometry>
+        <cylinder length=".076091" radius=".003175"/>
+      </geometry>
+      <origin xyz="0 0 -0.0380455" rpy="0 0 0"/>
+    </visual>
+    <collision>
+      <geometry>
+        <cylinder length=".076091" radius=".003175"/>
+      </geometry>
+      <origin xyz="0 0 -0.0380455" rpy="0 0 0"/>
+    </collision>
+    <inertial>
+      <origin xyz="0.047697136 0.009792716 0.16353663" rpy="0 0 0"/>
+      <mass value="0.05313834615"/>
+      <inertia ixx="0.13237" ixy="0.01154" ixz="-0.02820" iyy="0.12116" iyz="-0.04452" izz="0.03887"/>
+    </inertial>
+  </link>
+
+  <link name ="part_15">
+    <visual>
+      <geometry>
+        <cylinder length=".076091" radius=".003175"/>
+      </geometry>
+      <origin xyz="0 0 -0.0380455" rpy="0 0 0"/>
+    </visual>
+    <collision>
+      <geometry>
+        <cylinder length=".076091" radius=".003175"/>
+      </geometry>
+      <origin xyz="0 0 -0.0380455" rpy="0 0 0"/>
+    </collision>
+    <inertial>
+      <origin xyz="0.047697136 0.009792716 0.16353663" rpy="0 0 0"/>
+      <mass value="0.05313834615"/>
+      <inertia ixx="0.13237" ixy="0.01154" ixz="-0.02820" iyy="0.12116" iyz="-0.04452" izz="0.03887"/>
+    </inertial>
+  </link>
+
+  <link name ="part_25">
+    <visual>
+      <geometry>
+        <cylinder length=".076091" radius=".003175"/>
+      </geometry>
+      <origin xyz="0 0 -0.0380455" rpy="0 0 0"/>
+    </visual>
+    <collision>
+      <geometry>
+        <cylinder length=".076091" radius=".003175"/>
+      </geometry>
+      <origin xyz="0 0 -0.0380455" rpy="0 0 0"/>
+    </collision>
+    <inertial>
+      <origin xyz="0.047697136 0.009792716 0.16353663" rpy="0 0 0"/>
+      <mass value="0.05313834615"/>
+      <inertia ixx="0.13237" ixy="0.01154" ixz="-0.02820" iyy="0.12116" iyz="-0.04452" izz="0.03887"/>
+    </inertial>
+  </link>
+
+  <!-- PART 4 FOR 3 PORTIONS -->
+  <link name="part_04">
+    <visual>
+      <geometry>
+        <cylinder length=".147481" radius=".00955"/>
+      </geometry>
+      <origin xyz="0 0 -0.0737405" rpy="0 0 0"/>
+    </visual>
+    <collision>
+      <geometry>
+        <cylinder length=".147481" radius=".00955"/>
+      </geometry>
+      <origin xyz="0 0 -0.0737405" rpy="0 0 0"/>
+    </collision>
+    <inertial>
+      <origin xyz="0.04675124 0.001219962 0.199093582" rpy="0 0 0"/>
+      <mass value="0.07071051456"/>
+      <inertia ixx="0.61894" ixy="0.00140" ixz="0.03807" iyy="0.62157" iyz="0.02201" izz="0.01643"/>
+    </inertial>
+  </link>
+
+  <link name="part_14">
+    <visual>
+      <geometry>
+        <cylinder length=".147481" radius=".00955"/>
+      </geometry>
+      <origin xyz="0 0 -0.0737405" rpy="0 0 0"/>
+    </visual>
+    <collision>
+      <geometry>
+        <cylinder length=".147481" radius=".00955"/>
+      </geometry>
+      <origin xyz="0 0 -0.0737405" rpy="0 0 0"/>
+    </collision>
+    <inertial>
+      <origin xyz="0.04675124 0.001219962 0.199093582" rpy="0 0 0"/>
+      <mass value="0.07071051456"/>
+      <inertia ixx="0.61894" ixy="0.00140" ixz="0.03807" iyy="0.62157" iyz="0.02201" izz="0.01643"/>
+    </inertial>
+
+  </link>
+
+  <link name="part_24">
+    <visual>
+      <geometry>
+        <cylinder length=".147481" radius=".00955"/>
+      </geometry>
+      <origin xyz="0 0 -0.0737405" rpy="0 0 0"/>
+    </visual>
+    <collision>
+      <geometry>
+        <cylinder length=".147481" radius=".00955"/>
+      </geometry>
+      <origin xyz="0 0 -0.0737405" rpy="0 0 0"/>
+    </collision>
+    <inertial>
+      <origin xyz="0.04675124 0.001219962 0.199093582" rpy="0 0 0"/>
+      <mass value="0.07071051456"/>
+      <inertia ixx="0.61894" ixy="0.00140" ixz="0.03807" iyy="0.62157" iyz="0.02201" izz="0.01643"/>
+    </inertial>
+
+  </link>
+
+  <!-- PART 3 FOR 3 PORTIONS -->
+  <link name="part_03">
+    <visual>
+      <geometry>
+        <cylinder length=".07265" radius=".00955"/>
+      </geometry>
+      <origin xyz="0 0 0.036325" rpy="0 0 0"/>
+    </visual>
+    <collision>
+      <geometry>
+        <cylinder length=".07265" radius=".00955"/>
+      </geometry>
+      <origin xyz="0 0 0.036325" rpy="0 0 0"/>
+    </collision>
+    <inertial>
+      <origin xyz="0.046850046 -0.009024112 0.254807466" rpy="0 0 0"/>
+      <mass value="0.1034598837"/>
+      <inertia ixx="0.45349" ixy="-0.00762" ixz="-0.02532" iyy="0.31106" iyz="-0.02486" izz="0.209486"/>
+    </inertial>
+  </link>
+
+  <link name="part_13">
+    <visual>
+      <geometry>
+        <cylinder length=".07265" radius=".00955"/>
+      </geometry>
+      <origin xyz="0 0 0.036325" rpy="0 0 0"/>
+    </visual>
+    <collision>
+      <geometry>
+        <cylinder length=".07265" radius=".00955"/>
+      </geometry>
+      <origin xyz="0 0 0.036325" rpy="0 0 0"/>
+    </collision>
+    <inertial>
+      <origin xyz="0.046850046 -0.009024112 0.254807466" rpy="0 0 0"/>
+      <mass value="0.1034598837"/>
+      <inertia ixx="0.45349" ixy="-0.00762" ixz="-0.02532" iyy="0.31106" iyz="-0.02486" izz="0.209486"/>
+    </inertial>
+  </link>
+
+  <link name="part_23">
+    <visual>
+      <geometry>
+        <cylinder length=".07265" radius=".00955"/>
+      </geometry>
+      <origin xyz="0 0 0.036325" rpy="0 0 0"/>
+    </visual>
+    <collision>
+      <geometry>
+        <cylinder length=".07265" radius=".00955"/>
+      </geometry>
+      <origin xyz="0 0 0.036325" rpy="0 0 0"/>
+    </collision>
+    <inertial>
+      <origin xyz="0.046850046 -0.009024112 0.254807466" rpy="0 0 0"/>
+      <mass value="0.1034598837"/>
+      <inertia ixx="0.45349" ixy="-0.00762" ixz="-0.02532" iyy="0.31106" iyz="-0.02486" izz="0.209486"/>
+    </inertial>
+  </link>
+
+  <!-- PART 2 FOR 3 PORTIONS -->
+  <link name="part_02">
+    <visual>
+      <geometry>
+        <cylinder length=".03902" radius=".00955"/>
+      </geometry>
+      <origin xyz="0 0 0.01951" rpy="1.57 0 0"/>
+    </visual>
+    <collision>
+      <geometry>
+        <cylinder length=".03902" radius=".00955"/>
+      </geometry>
+      <origin xyz="0 0 0.01951" rpy="1.57 0 0"/>
+    </collision>
+    <inertial>
+      <origin xyz="0.019760184 -0.011559286 0.280646124" rpy="0 0 0"/>
+      <mass value="0.00556557838"/>
+      <inertia ixx="0.00146" ixy="0.0" ixz="0.0" iyy="0.30223" iyz="0.0" izz="0.00223"/>
+    </inertial>
+  </link>
+
+  <link name="part_12">
+    <visual>
+      <geometry>
+        <cylinder length=".03902" radius=".00955"/>
+      </geometry>
+      <origin xyz="0 0 0.01951" rpy="1.57 0 0"/>
+    </visual>
+    <collision>
+      <geometry>
+        <cylinder length=".03902" radius=".00955"/>
+      </geometry>
+      <origin xyz="0 0 0.01951" rpy="1.57 0 0"/>
+    </collision>
+    <inertial>
+      <origin xyz="0.019760184 -0.011559286 0.280646124" rpy="0 0 0"/>
+      <mass value="0.00556557838"/>
+      <inertia ixx="0.00146" ixy="0.0" ixz="0.0" iyy="0.30223" iyz="0.0" izz="0.00223"/>
+    </inertial>
+  </link>
+
+  <link name="part_22">
+    <visual>
+      <geometry>
+        <cylinder length=".03902" radius=".00955"/>
+      </geometry>
+      <origin xyz="0 0 0.01951" rpy="1.57 0 0"/>
+    </visual>
+    <collision>
+      <geometry>
+        <cylinder length=".03902" radius=".00955"/>
+      </geometry>
+      <origin xyz="0 0 0.01951" rpy="1.57 0 0"/>
+    </collision>
+    <inertial>
+      <origin xyz="0.019760184 -0.011559286 0.280646124" rpy="0 0 0"/>
+      <mass value="0.00556557838"/>
+      <inertia ixx="0.00146" ixy="0.0" ixz="0.0" iyy="0.30223" iyz="0.0" izz="0.00223"/>
+    </inertial>
+  </link>
+
+  <!-- PART 1 -->
+
+  <link name="part_1">
+    <visual>
+      <geometry>
+        <cylinder length=".062821" radius=".00955"/>
+      </geometry>
+      <origin xyz="0 0 0.0314105" rpy="0 0 0"/>
+    </visual>
+    <collision>
+      <geometry>
+        <cylinder length=".062821" radius=".00955"/>
+      </geometry>
+      <origin xyz="0 0 0.0314105" rpy="0 0 0"/>
+    </collision>
+    <inertial>
+      <origin xyz="0.00259588 -0.001184656 0.308323742" rpy="0 0 0"/>
+      <mass value="0.0887680268"/>
+      <inertia ixx="0.07286" ixy="-0.00001" ixz="0.01339" iyy="0.08207" iyz="-0.00002" izz="0.05297"/>
+    </inertial>
+  </link>
+
+  <!--HEAD LINK  -->
+  
+  <link name = "head_link">
+    <visual>
+      <geometry>
+        <cylinder length=".14971" radius= ".00955"/>
+      </geometry>
+      <origin xyz="0 0.074855 0.681782" rpy="1.57 0 0"/>
+    </visual>
+    <collision>
+      <geometry>
+        <cylinder length=".14971" radius= ".00955"/>
+      </geometry>
+      <origin xyz="0 0.074855 0.681782" rpy="1.57 0 0"/>
+    </collision>
+    <inertial>
+      <origin xyz="-0.077506068 -0.001193546 -0.369502182" rpy="0 0 0"/>
+      <mass value="0.02883033104"/>
+      <inertia ixx="0.00757" ixy="0.0" ixz="0.0" iyy="0.212" iyz="0.0" izz="0.21199"/>
+    </inertial>
+  </link>
+  <!-- JOINTS -->
+
+  <!-- JOINTS -->
+  <link name="world"/>
+
+  <joint name="fixed" type="fixed">
+    <!-- <limit effort="0" lower="-100" upper="100" velocity="2"/> -->
+    <axis xyz="0 0 1"/>
+    <parent link="world"/>
+    <child link="head_link"/>
+  </joint>
+
+  <!-- FROM PART1 TO HEAD_LINK -->
+  <joint name="1_to_head_link" type="fixed">
+    <parent link="head_link"/>
+    <child link="part_1"/>
+    <origin xyz="0 0 0.6121715" rpy="0 0 0"/>
+  </joint>
+  
+  
+  <!-- FROM PART2 TO PART1 -->
+  <joint name="02_to_1" type="fixed">
+    <parent link="part_1"/>
+    <child link="part_02"/>
+    <origin xyz="0 0.01951 -0.02865" rpy="0 0 0"/>
+  </joint>
+
+  <joint name="12_to_1" type="fixed">
+    <parent link="part_1"/>
+    <child link="part_12"/>
+    <origin xyz="0.016896156 -0.009755 -0.02865" rpy="0 0 4.183"/>
+  </joint>
+
+  <joint name="22_to_1" type="fixed">
+    <parent link="part_1"/>
+    <child link="part_22"/>
+    <origin xyz="-0.016896156 -0.009755 -0.02865" rpy="0 0 2.09333"/>
+  </joint>
+
+
+  <!-- FROM PART3 TO PART2 -->
+  <joint name="03_to_02" type="fixed">
+    <parent link="part_02"/>
+    <child link="part_03"/>
+    <origin xyz="0 0 -0.0631" rpy="0 0 0"/> <!-- y =-0.00995 -->
+  </joint>
+
+  <joint name="13_to_12" type="fixed">
+    <parent link="part_12"/>
+    <child link="part_13"/>
+    <origin xyz="0 0 -0.0631" rpy="0 0 0"/>
+  </joint>
+
+  <joint name="23_to_22" type="fixed">
+    <parent link="part_22"/>
+    <child link="part_23"/>
+    <origin xyz="0 0 -0.0631" rpy="0 0 0"/>
+  </joint>
+
+  <!-- FROM PART4 TO PART3 -->
+  <joint name="04_to_03" type="revolute">
+    
+    <limit effort="0" lower="0" upper="12.56" velocity="2"/>
+    <parent link="part_03"/>
+    <child link="part_04"/>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+  </joint>
+
+  <joint name="14_to_13" type="revolute">
+    <pose xyz="0 0 0" rpy="0.956 0 0"/>
+    <limit effort="0" lower="0" upper="12.56" velocity="2"/>
+    <parent link="part_13"/>
+    <child link="part_14"/>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+  </joint>
+
+  <joint name="24_to_23" type="revolute">
+    <pose xyz="0 0 0" rpy="0.956 0 0"/>
+    <limit effort="0" lower="0" upper="12.56" velocity="2"/>
+    <parent link="part_23"/>
+    <child link="part_24"/>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+  </joint>
+
+
+  <!-- FROM PART5 TO PART4 -->
+  <joint name="05_to_04" type="revolute">
+    <pose xyz="0 0 0" rpy="5.251 0 0"/>
+    <limit effort="0" lower="0" upper="12.56" velocity="2"/>
+    <parent link="part_04"/>
+    <child link="part_05"/>
+    <origin xyz="0 0 -0.149182" rpy="0 0 0"/>
+  </joint>
+
+  <joint name="15_to_14" type="revolute">
+    <pose xyz="0 0 0" rpy="5.251 0 0"/>
+    <limit effort="0" lower="0" upper="12.56" velocity="2"/>
+    <parent link="part_14"/>
+    <child link="part_15"/>
+    <origin xyz="0 0 -0.149182" rpy="0 0 0"/>
+  </joint>
+
+  <joint name="25_to_24" type="revolute">
+    <pose xyz="0 0 0" rpy="5.251 0 0"/>
+    <limit effort="0" lower="0" upper="12.56" velocity="2"/>
+    <parent link="part_24"/>
+    <child link="part_25"/>
+    <origin xyz="0 0 -0.149182" rpy="0 0 0"/>
+  </joint>
+
+  <!-- FROM PART6 TO PART5 -->
+  <joint name="06_to_05" type="revolute">
+    <pose xyz="0 0 0" rpy="5.803 0 0"/>
+    <limit effort="0" lower="0" upper="12.56" velocity="2"/>
+    <parent link="part_05"/>
+    <child link="part_06"/>
+    <origin xyz="0 0 -0.0737405" rpy="0 0 0"/>
+  </joint>
+
+  <joint name="16_to_15" type="revolute">
+    <pose xyz="0 0 0" rpy="5.803 0 0"/>
+    <limit effort="0" lower="0" upper="12.56" velocity="2"/>
+    <parent link="part_15"/>
+    <child link="part_16"/>
+    <axis xyz="1 0 0"/>
+    <origin xyz="0 0 -0.0737405" rpy="0 0 0"/>
+  </joint>
+
+  <joint name="26_to_25" type="revolute">
+    <pose xyz="0 0 0" rpy="5.803 0 0"/>
+    <limit effort="0" lower="0" upper="12.56" velocity="2"/>
+    <parent link="part_25"/>
+    <child link="part_26"/>
+    <axis xyz="1 0 0"/>
+    <origin xyz="0 0 -0.0737405" rpy="0 0 0"/>
+  </joint>
+
+
+
+  <!-- FROM BASE TO PART 6 -->
+  <joint name="base_to_06" type="revolute">
+    <limit effort="0" lower="0" upper="12.56" velocity="2"/>
+    <parent link="part_06"/>
+    <child link="base_link"/>
+    <origin xyz="0 -.016989 -.25718" rpy="0 0 0"/>
+  </joint>
+
+  <joint name="base_to_16" type="revolute">
+    <limit effort="0" lower="0" upper="12.56" velocity="2"/>
+    <parent link="part_16"/>
+    <child link="base_link"/>
+    <axis xyz="1 0 0"/>
+    <origin xyz="0 -.016989 -.25718" rpy="0 0 0"/>
+  </joint>
+
+  <joint name="base_to_26" type="revolute">
+    <limit effort="0" lower="0" upper="12.56" velocity="2"/>
+    <parent link="part_26"/>
+    <child link="base_link"/>
+    <axis xyz="1 0 0"/>
+    <origin xyz="0 -.016989 -.25718" rpy="0 0 0"/>
+  </joint>
+      <!-- GAZEBO PLUGIN -->
+      <gazebo>
+        <plugin name="gazebo_ros_control" filename="libgazebo_ros_control.so">
+          <robotNamespace>/goatleg</robotNamespace>
+        </plugin>
+      </gazebo>
+
+
+</robot>

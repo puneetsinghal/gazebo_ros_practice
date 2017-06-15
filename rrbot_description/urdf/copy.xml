@@ -533,9 +533,6 @@
     <origin xyz="0 0 -0.0737405" rpy="0 0 0"/>
   </joint>
 
-
-
-  <!-- FROM BASE TO PART 6 -->
   <joint name="base_to_06" type="revolute">
     <limit effort="0" lower="0" upper="12.56" velocity="2"/>
     <parent link="part_06"/>

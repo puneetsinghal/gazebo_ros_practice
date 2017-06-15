@@ -1,0 +1,991 @@
+<sdf version='1.4'>
+  <model name='rrbot'>
+    <link name='hipJoint'>
+      <pose>0 0 1 0 -0 0</pose>
+      <inertial>
+        <pose>1.6117e-18 -2.14893e-18 0 0 -0 0</pose>
+        <mass>0.201812</mass>
+        <inertia>
+          <ixx>0.666349</ixx>
+          <ixy>1.94289e-16</ixy>
+          <ixz>7.88861e-31</ixz>
+          <iyy>0.870779</iyy>
+          <iyz>7.88861e-31</iyz>
+          <izz>1.48413</izz>
+        </inertia>
+      </inertial>
+      <collision name='hipJoint_collision'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://goatLeg/meshes/singleleghipjoint.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <collision name='hipJoint_collision_leg1_motormountingbracket_fixed'>
+        <pose>0.04249 0 0 -1.5708 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://goatLeg/meshes/motormountingbracket_fixed.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <collision name='hipJoint_collision_leg1_pipebetweenhipandmotormountingbracket'>
+        <pose>0.01176 0 0 0 0 -1.5708</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://goatLeg/meshes/pipebetweenhipandmotormountingbracket.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <collision name='hipJoint_collision_leg2_motormountingbracket_fixed'>
+        <pose>-0.021245 0.0367974 0 -1.5708 5.55112e-17 2.0944</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://goatLeg/meshes/motormountingbracket_fixed.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <collision name='hipJoint_collision_leg2_pipebetweenhipandmotormountingbracket'>
+        <pose>-0.00588 0.0101845 0 0 -0 0.523599</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://goatLeg/meshes/pipebetweenhipandmotormountingbracket.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <collision name='hipJoint_collision_leg3_motormountingbracket_fixed'>
+        <pose>-0.021245 -0.0367974 0 -1.5708 -5.55112e-17 -2.0944</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://goatLeg/meshes/motormountingbracket_fixed.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <collision name='hipJoint_collision_leg3_pipebetweenhipandmotormountingbracket'>
+        <pose>-0.00588 -0.0101845 0 0 -0 2.61799</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://goatLeg/meshes/pipebetweenhipandmotormountingbracket.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='hipJoint_visual'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://goatLeg/meshes/singleleghipjoint.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <visual name='hipJoint_visual_leg1_motormountingbracket_fixed'>
+        <pose>0.04249 0 0 -1.5708 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://goatLeg/meshes/motormountingbracket_fixed.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <visual name='hipJoint_visual_leg1_pipebetweenhipandmotormountingbracket'>
+        <pose>0.01176 0 0 0 0 -1.5708</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://goatLeg/meshes/pipebetweenhipandmotormountingbracket.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <visual name='hipJoint_visual_leg2_motormountingbracket_fixed'>
+        <pose>-0.021245 0.0367974 0 -1.5708 5.55112e-17 2.0944</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://goatLeg/meshes/motormountingbracket_fixed.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <visual name='hipJoint_visual_leg2_pipebetweenhipandmotormountingbracket'>
+        <pose>-0.00588 0.0101845 0 0 -0 0.523599</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://goatLeg/meshes/pipebetweenhipandmotormountingbracket.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <visual name='hipJoint_visual_leg3_motormountingbracket_fixed'>
+        <pose>-0.021245 -0.0367974 0 -1.5708 -5.55112e-17 -2.0944</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://goatLeg/meshes/motormountingbracket_fixed.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <visual name='hipJoint_visual_leg3_pipebetweenhipandmotormountingbracket'>
+        <pose>-0.00588 -0.0101845 0 0 -0 2.61799</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://goatLeg/meshes/pipebetweenhipandmotormountingbracket.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <velocity_decay>
+        <linear>0</linear>
+        <angular>0</angular>
+      </velocity_decay>
+    </link>
+    <joint name='fixed' type='revolute'>
+      <child>hipJoint</child>
+      <parent>world</parent>
+      <axis>
+        <limit>
+          <lower>0</lower>
+          <upper>0</upper>
+        </limit>
+        <dynamics>
+          <damping>0</damping>
+        </dynamics>
+        <xyz>0 0 1</xyz>
+      </axis>
+    </joint>
+    <link name='leg1_upper_leg_bracket'>
+      <pose>0.05113 0.01267 0.9332 -1.5708 0 0</pose>
+      <inertial>
+        <pose>0.02583 0 -0.00575 0 -0 0</pose>
+        <mass>0.0576607</mass>
+        <inertia>
+          <ixx>0.0151419</ixx>
+          <ixy>0</ixy>
+          <ixz>8.56391e-06</ixz>
+          <iyy>0.42404</iyy>
+          <iyz>0</iyz>
+          <izz>0.424018</izz>
+        </inertia>
+      </inertial>
+      <collision name='leg1_upper_leg_bracket_collision'>
+        <pose>0 0 0 0 -0 1.5708</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://goatLeg/meshes/upper_leg_bracket.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <collision name='leg1_upper_leg_bracket_collision_leg1_upper_leg'>
+        <pose>0.05166 0 -0.0115 0 0 -1.5708</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://goatLeg/meshes/upper_leg.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='leg1_upper_leg_bracket_visual'>
+        <pose>0 0 0 0 -0 1.5708</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://goatLeg/meshes/upper_leg_bracket.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <visual name='leg1_upper_leg_bracket_visual_leg1_upper_leg'>
+        <pose>0.05166 0 -0.0115 0 0 -1.5708</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://goatLeg/meshes/upper_leg.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <velocity_decay>
+        <linear>0</linear>
+        <angular>0</angular>
+      </velocity_decay>
+    </link>
+    <joint name='leg1_motorMoutingBracket_to_upperLegBracket' type='revolute'>
+      <child>leg1_upper_leg_bracket</child>
+      <parent>hipJoint</parent>
+      <axis>
+        <xyz>0 1 -2.05104e-10</xyz>
+        <limit>
+          <lower>-1.5708</lower>
+          <upper>1.5708</upper>
+          <effort>1000</effort>
+          <velocity>0</velocity>
+        </limit>
+        <dynamics/>
+      </axis>
+    </joint>
+    <link name='leg1_eyeJoint'>
+      <pose>0.20164 0.00117 0.9332 -1.5708 0 0</pose>
+      <inertial>
+        <pose>0 0 0 0 -0 0</pose>
+        <mass>0.0288303</mass>
+        <inertia>
+          <ixx>0.00757</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>0.212</iyy>
+          <iyz>0</iyz>
+          <izz>0.21199</izz>
+        </inertia>
+      </inertial>
+      <collision name='leg1_eyeJoint_collision'>
+        <pose>0 0 0 0 -0 1.5708</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://goatLeg/meshes/eye_joint.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='leg1_eyeJoint_visual'>
+        <pose>0 0 0 0 -0 1.5708</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://goatLeg/meshes/eye_joint.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <velocity_decay>
+        <linear>0</linear>
+        <angular>0</angular>
+      </velocity_decay>
+    </link>
+    <joint name='leg1_upperLeg_to_eyeJoint' type='revolute'>
+      <child>leg1_eyeJoint</child>
+      <parent>leg1_upper_leg_bracket</parent>
+      <axis>
+        <xyz>1 0 0</xyz>
+        <limit>
+          <lower>-3.14159</lower>
+          <upper>3.14159</upper>
+          <effort>1000</effort>
+          <velocity>0</velocity>
+        </limit>
+        <dynamics/>
+      </axis>
+    </joint>
+    <link name='leg1_sphericalJointMiddleLink'>
+      <pose>0.20164 0.00117 0.9332 -1.5708 0 0</pose>
+      <inertial>
+        <pose>0 0 0 0 -0 0</pose>
+        <mass>0.0288303</mass>
+        <inertia>
+          <ixx>0.00757</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>0.212</iyy>
+          <iyz>0</iyz>
+          <izz>0.21199</izz>
+        </inertia>
+      </inertial>
+      <collision name='leg1_sphericalJointMiddleLink_collision'>
+        <pose>0 0 0 0 -0 1.5708</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://goatLeg/meshes/spherical_joint_middle_piece.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='leg1_sphericalJointMiddleLink_visual'>
+        <pose>0 0 0 0 -0 1.5708</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://goatLeg/meshes/spherical_joint_middle_piece.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <velocity_decay>
+        <linear>0</linear>
+        <angular>0</angular>
+      </velocity_decay>
+    </link>
+    <joint name='leg1_eyeJoint_to_sphericalJointMiddleLink' type='revolute'>
+      <child>leg1_sphericalJointMiddleLink</child>
+      <parent>leg1_eyeJoint</parent>
+      <axis>
+        <xyz>0 1 -2.05104e-10</xyz>
+        <limit>
+          <lower>-1.5708</lower>
+          <upper>1.5708</upper>
+          <effort>1000</effort>
+          <velocity>0</velocity>
+        </limit>
+        <dynamics/>
+      </axis>
+    </joint>
+    <link name='leg1_bendElbow'>
+      <pose>0.2208 0.00117 0.9332 -1.5708 0 0</pose>
+      <inertial>
+        <pose>0.100313 0.0714087 0 0 -0 0</pose>
+        <mass>0.086491</mass>
+        <inertia>
+          <ixx>0.242143</ixx>
+          <ixy>-0.204729</ixy>
+          <ixz>0</ixz>
+          <iyy>0.418199</iyy>
+          <iyz>0</iyz>
+          <izz>0.637603</izz>
+        </inertia>
+      </inertial>
+      <collision name='leg1_bendElbow_collision'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://goatLeg/meshes/elbow_bend.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <collision name='leg1_bendElbow_collision_leg1_footBracket'>
+        <pose>0.239238 0.202306 0 0 -0 0.820305</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://goatLeg/meshes/foot_bracket.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <collision name='leg1_bendElbow_collision_leg1_lowerLeg'>
+        <pose>0.0617 0.01192 0 0 0 -0.750492</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://goatLeg/meshes/lower_leg.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='leg1_bendElbow_visual'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://goatLeg/meshes/elbow_bend.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <visual name='leg1_bendElbow_visual_leg1_footBracket'>
+        <pose>0.239238 0.202306 0 0 -0 0.820305</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://goatLeg/meshes/foot_bracket.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <visual name='leg1_bendElbow_visual_leg1_lowerLeg'>
+        <pose>0.0617 0.01192 0 0 0 -0.750492</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://goatLeg/meshes/lower_leg.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <velocity_decay>
+        <linear>0</linear>
+        <angular>0</angular>
+      </velocity_decay>
+    </link>
+    <joint name='leg1_sphericalJointMiddleLink_to_bendElbow' type='revolute'>
+      <child>leg1_bendElbow</child>
+      <parent>leg1_sphericalJointMiddleLink</parent>
+      <axis>
+        <xyz>1 0 0</xyz>
+        <limit>
+          <lower>-3.14159</lower>
+          <upper>3.14159</upper>
+          <effort>1000</effort>
+          <velocity>0</velocity>
+        </limit>
+        <dynamics/>
+      </axis>
+    </joint>
+    <link name='leg2_upper_leg_bracket'>
+      <pose>-0.0365375 0.0379449 0.9332 -1.5708 5.55112e-17 2.0944</pose>
+      <inertial>
+        <pose>0.02583 0 -0.00575 0 -0 0</pose>
+        <mass>0.0576607</mass>
+        <inertia>
+          <ixx>0.0151419</ixx>
+          <ixy>0</ixy>
+          <ixz>8.56391e-06</ixz>
+          <iyy>0.42404</iyy>
+          <iyz>0</iyz>
+          <izz>0.424018</izz>
+        </inertia>
+      </inertial>
+      <collision name='leg2_upper_leg_bracket_collision'>
+        <pose>0 0 0 0 -0 1.5708</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://goatLeg/meshes/upper_leg_bracket.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <collision name='leg2_upper_leg_bracket_collision_leg2_upper_leg'>
+        <pose>0.05166 0 -0.0115 0 0 -1.5708</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://goatLeg/meshes/upper_leg.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='leg2_upper_leg_bracket_visual'>
+        <pose>0 0 0 0 -0 1.5708</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://goatLeg/meshes/upper_leg_bracket.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <visual name='leg2_upper_leg_bracket_visual_leg2_upper_leg'>
+        <pose>0.05166 0 -0.0115 0 0 -1.5708</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://goatLeg/meshes/upper_leg.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <velocity_decay>
+        <linear>0</linear>
+        <angular>0</angular>
+      </velocity_decay>
+    </link>
+    <joint name='leg2_motorMoutingBracket_to_upperLegBracket' type='revolute'>
+      <child>leg2_upper_leg_bracket</child>
+      <parent>hipJoint</parent>
+      <axis>
+        <xyz>-0.866025 -0.5 -2.05104e-10</xyz>
+        <limit>
+          <lower>-1.5708</lower>
+          <upper>1.5708</upper>
+          <effort>1000</effort>
+          <velocity>0</velocity>
+        </limit>
+        <dynamics/>
+      </axis>
+    </joint>
+    <link name='leg2_eyeJoint'>
+      <pose>-0.101833 0.17404 0.9332 -1.5708 5.55112e-17 2.0944</pose>
+      <inertial>
+        <pose>0 0 0 0 -0 0</pose>
+        <mass>0.0288303</mass>
+        <inertia>
+          <ixx>0.00757</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>0.212</iyy>
+          <iyz>0</iyz>
+          <izz>0.21199</izz>
+        </inertia>
+      </inertial>
+      <collision name='leg2_eyeJoint_collision'>
+        <pose>0 0 0 0 -0 1.5708</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://goatLeg/meshes/eye_joint.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='leg2_eyeJoint_visual'>
+        <pose>0 0 0 0 -0 1.5708</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://goatLeg/meshes/eye_joint.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <velocity_decay>
+        <linear>0</linear>
+        <angular>0</angular>
+      </velocity_decay>
+    </link>
+    <joint name='leg2_upperLeg_to_eyeJoint' type='revolute'>
+      <child>leg2_eyeJoint</child>
+      <parent>leg2_upper_leg_bracket</parent>
+      <axis>
+        <xyz>-0.5 0.866025 0</xyz>
+        <limit>
+          <lower>-3.14159</lower>
+          <upper>3.14159</upper>
+          <effort>1000</effort>
+          <velocity>0</velocity>
+        </limit>
+        <dynamics/>
+      </axis>
+    </joint>
+    <link name='leg2_sphericalJointMiddleLink'>
+      <pose>-0.101833 0.17404 0.9332 -1.5708 5.55112e-17 2.0944</pose>
+      <inertial>
+        <pose>0 0 0 0 -0 0</pose>
+        <mass>0.0288303</mass>
+        <inertia>
+          <ixx>0.00757</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>0.212</iyy>
+          <iyz>0</iyz>
+          <izz>0.21199</izz>
+        </inertia>
+      </inertial>
+      <collision name='leg2_sphericalJointMiddleLink_collision'>
+        <pose>0 0 0 0 -0 1.5708</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://goatLeg/meshes/spherical_joint_middle_piece.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='leg2_sphericalJointMiddleLink_visual'>
+        <pose>0 0 0 0 -0 1.5708</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://goatLeg/meshes/spherical_joint_middle_piece.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <velocity_decay>
+        <linear>0</linear>
+        <angular>0</angular>
+      </velocity_decay>
+    </link>
+    <joint name='leg2_eyeJoint_to_sphericalJointMiddleLink' type='revolute'>
+      <child>leg2_sphericalJointMiddleLink</child>
+      <parent>leg2_eyeJoint</parent>
+      <axis>
+        <xyz>-0.866025 -0.5 -2.05104e-10</xyz>
+        <limit>
+          <lower>-1.5708</lower>
+          <upper>1.5708</upper>
+          <effort>1000</effort>
+          <velocity>0</velocity>
+        </limit>
+        <dynamics/>
+      </axis>
+    </joint>
+    <link name='leg2_bendElbow'>
+      <pose>-0.111413 0.190633 0.9332 -1.5708 5.55112e-17 2.0944</pose>
+      <inertial>
+        <pose>0.100313 0.0714087 0 0 -0 0</pose>
+        <mass>0.086491</mass>
+        <inertia>
+          <ixx>0.242143</ixx>
+          <ixy>-0.204729</ixy>
+          <ixz>0</ixz>
+          <iyy>0.418199</iyy>
+          <iyz>0</iyz>
+          <izz>0.637603</izz>
+        </inertia>
+      </inertial>
+      <collision name='leg2_bendElbow_collision'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://goatLeg/meshes/elbow_bend.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <collision name='leg2_bendElbow_collision_leg2_footBracket'>
+        <pose>0.239238 0.202306 0 0 -0 0.820305</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://goatLeg/meshes/foot_bracket.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <collision name='leg2_bendElbow_collision_leg2_lowerLeg'>
+        <pose>0.0617 0.01192 0 0 0 -0.750492</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://goatLeg/meshes/lower_leg.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='leg2_bendElbow_visual'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://goatLeg/meshes/elbow_bend.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <visual name='leg2_bendElbow_visual_leg2_footBracket'>
+        <pose>0.239238 0.202306 0 0 -0 0.820305</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://goatLeg/meshes/foot_bracket.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <visual name='leg2_bendElbow_visual_leg2_lowerLeg'>
+        <pose>0.0617 0.01192 0 0 0 -0.750492</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://goatLeg/meshes/lower_leg.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <velocity_decay>
+        <linear>0</linear>
+        <angular>0</angular>
+      </velocity_decay>
+    </link>
+    <joint name='leg2_sphericalJointMiddleLink_to_bendElbow' type='revolute'>
+      <child>leg2_bendElbow</child>
+      <parent>leg2_sphericalJointMiddleLink</parent>
+      <axis>
+        <xyz>-0.5 0.866025 0</xyz>
+        <limit>
+          <lower>-3.14159</lower>
+          <upper>3.14159</upper>
+          <effort>1000</effort>
+          <velocity>0</velocity>
+        </limit>
+        <dynamics/>
+      </axis>
+    </joint>
+    <link name='leg3_upper_leg_bracket'>
+      <pose>-0.0145925 -0.0506149 0.9332 -1.5708 -5.55112e-17 -2.0944</pose>
+      <inertial>
+        <pose>0.02583 0 -0.00575 0 -0 0</pose>
+        <mass>0.0576607</mass>
+        <inertia>
+          <ixx>0.0151419</ixx>
+          <ixy>0</ixy>
+          <ixz>8.56391e-06</ixz>
+          <iyy>0.42404</iyy>
+          <iyz>0</iyz>
+          <izz>0.424018</izz>
+        </inertia>
+      </inertial>
+      <collision name='leg3_upper_leg_bracket_collision'>
+        <pose>0 0 0 0 -0 1.5708</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://goatLeg/meshes/upper_leg_bracket.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <collision name='leg3_upper_leg_bracket_collision_leg3_upper_leg'>
+        <pose>0.05166 0 -0.0115 0 0 -1.5708</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://goatLeg/meshes/upper_leg.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='leg3_upper_leg_bracket_visual'>
+        <pose>0 0 0 0 -0 1.5708</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://goatLeg/meshes/upper_leg_bracket.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <visual name='leg3_upper_leg_bracket_visual_leg3_upper_leg'>
+        <pose>0.05166 0 -0.0115 0 0 -1.5708</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://goatLeg/meshes/upper_leg.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <velocity_decay>
+        <linear>0</linear>
+        <angular>0</angular>
+      </velocity_decay>
+    </link>
+    <joint name='leg3_motorMoutingBracket_to_upperLegBracket' type='revolute'>
+      <child>leg3_upper_leg_bracket</child>
+      <parent>hipJoint</parent>
+      <axis>
+        <xyz>0.866025 -0.5 -2.05104e-10</xyz>
+        <limit>
+          <lower>-1.5708</lower>
+          <upper>1.5708</upper>
+          <effort>1000</effort>
+          <velocity>0</velocity>
+        </limit>
+        <dynamics/>
+      </axis>
+    </joint>
+    <link name='leg3_eyeJoint'>
+      <pose>-0.0998068 -0.17521 0.9332 -1.5708 -5.55112e-17 -2.0944</pose>
+      <inertial>
+        <pose>0 0 0 0 -0 0</pose>
+        <mass>0.0288303</mass>
+        <inertia>
+          <ixx>0.00757</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>0.212</iyy>
+          <iyz>0</iyz>
+          <izz>0.21199</izz>
+        </inertia>
+      </inertial>
+      <collision name='leg3_eyeJoint_collision'>
+        <pose>0 0 0 0 -0 1.5708</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://goatLeg/meshes/eye_joint.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='leg3_eyeJoint_visual'>
+        <pose>0 0 0 0 -0 1.5708</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://goatLeg/meshes/eye_joint.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <velocity_decay>
+        <linear>0</linear>
+        <angular>0</angular>
+      </velocity_decay>
+    </link>
+    <joint name='leg3_upperLeg_to_eyeJoint' type='revolute'>
+      <child>leg3_eyeJoint</child>
+      <parent>leg3_upper_leg_bracket</parent>
+      <axis>
+        <xyz>-0.5 -0.866025 0</xyz>
+        <limit>
+          <lower>-3.14159</lower>
+          <upper>3.14159</upper>
+          <effort>1000</effort>
+          <velocity>0</velocity>
+        </limit>
+        <dynamics/>
+      </axis>
+    </joint>
+    <link name='leg3_sphericalJointMiddleLink'>
+      <pose>-0.0998068 -0.17521 0.9332 -1.5708 -5.55112e-17 -2.0944</pose>
+      <inertial>
+        <pose>0 0 0 0 -0 0</pose>
+        <mass>0.0288303</mass>
+        <inertia>
+          <ixx>0.00757</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>0.212</iyy>
+          <iyz>0</iyz>
+          <izz>0.21199</izz>
+        </inertia>
+      </inertial>
+      <collision name='leg3_sphericalJointMiddleLink_collision'>
+        <pose>0 0 0 0 -0 1.5708</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://goatLeg/meshes/spherical_joint_middle_piece.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='leg3_sphericalJointMiddleLink_visual'>
+        <pose>0 0 0 0 -0 1.5708</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://goatLeg/meshes/spherical_joint_middle_piece.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <velocity_decay>
+        <linear>0</linear>
+        <angular>0</angular>
+      </velocity_decay>
+    </link>
+    <joint name='leg3_eyeJoint_to_sphericalJointMiddleLink' type='revolute'>
+      <child>leg3_sphericalJointMiddleLink</child>
+      <parent>leg3_eyeJoint</parent>
+      <axis>
+        <xyz>0.866025 -0.5 -2.05104e-10</xyz>
+        <limit>
+          <lower>-1.5708</lower>
+          <upper>1.5708</upper>
+          <effort>1000</effort>
+          <velocity>0</velocity>
+        </limit>
+        <dynamics/>
+      </axis>
+    </joint>
+    <link name='leg3_bendElbow'>
+      <pose>-0.109387 -0.191803 0.9332 -1.5708 -5.55112e-17 -2.0944</pose>
+      <inertial>
+        <pose>0.100313 0.0714087 0 0 -0 0</pose>
+        <mass>0.086491</mass>
+        <inertia>
+          <ixx>0.242143</ixx>
+          <ixy>-0.204729</ixy>
+          <ixz>0</ixz>
+          <iyy>0.418199</iyy>
+          <iyz>0</iyz>
+          <izz>0.637603</izz>
+        </inertia>
+      </inertial>
+      <collision name='leg3_bendElbow_collision'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://goatLeg/meshes/elbow_bend.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <collision name='leg3_bendElbow_collision_leg3_footBracket'>
+        <pose>0.239238 0.202306 0 0 -0 0.820305</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://goatLeg/meshes/foot_bracket.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <collision name='leg3_bendElbow_collision_leg3_lowerLeg'>
+        <pose>0.0617 0.01192 0 0 0 -0.750492</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://goatLeg/meshes/lower_leg.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='leg3_bendElbow_visual'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://goatLeg/meshes/elbow_bend.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <visual name='leg3_bendElbow_visual_leg3_footBracket'>
+        <pose>0.239238 0.202306 0 0 -0 0.820305</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://goatLeg/meshes/foot_bracket.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <visual name='leg3_bendElbow_visual_leg3_lowerLeg'>
+        <pose>0.0617 0.01192 0 0 0 -0.750492</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://goatLeg/meshes/lower_leg.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <velocity_decay>
+        <linear>0</linear>
+        <angular>0</angular>
+      </velocity_decay>
+    </link>
+    <joint name='leg3_sphericalJointMiddleLink_to_bendElbow' type='revolute'>
+      <child>leg3_bendElbow</child>
+      <parent>leg3_sphericalJointMiddleLink</parent>
+      <axis>
+        <xyz>-0.5 -0.866025 0</xyz>
+        <limit>
+          <lower>-3.14159</lower>
+          <upper>3.14159</upper>
+          <effort>1000</effort>
+          <velocity>0</velocity>
+        </limit>
+        <dynamics/>
+      </axis>
+    </joint>
+
+
+
+    <link name='footAssembly'>
+      <pose>0 0 0.9332 -1.5708 -5.55112e-17 -2.0944</pose>
+      <inertial>
+        <pose>0.100313 0.0714087 0 0 -0 0</pose>
+        <mass>0.086491</mass>
+        <inertia>
+          <ixx>0.242143</ixx>
+          <ixy>-0.204729</ixy>
+          <ixz>0</ixz>
+          <iyy>0.418199</iyy>
+          <iyz>0</iyz>
+          <izz>0.637603</izz>
+        </inertia>
+      </inertial>
+      <collision name='footAssembly_collision'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://goatLeg/meshes/footassembly.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='footAssembly_visual'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://goatLeg/meshes/footassembly.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <velocity_decay>
+        <linear>0</linear>
+        <angular>0</angular>
+      </velocity_decay>
+    </link>
+    <joint name='footAssembly_to_leg3_footBracket' type='revolute'>
+      <child>leg3_footBracket</child>
+      <parent>footAssembly</parent>
+      <axis>
+        <xyz>-0.5 -0.866025 0</xyz>
+        <limit>
+          <lower>-3.14159</lower>
+          <upper>3.14159</upper>
+          <effort>1000</effort>
+          <velocity>0</velocity>
+        </limit>
+        <dynamics/>
+      </axis>
+    </joint>
+  </model>
+</sdf>

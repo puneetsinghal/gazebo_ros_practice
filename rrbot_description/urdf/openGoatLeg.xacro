@@ -334,6 +334,34 @@
 <xacro:singleLeg prefix="leg1" reflect="0" />
 <xacro:singleLeg prefix="leg2" reflect="1" />
 <xacro:singleLeg prefix="leg3" reflect="2" />
+
+<!--   <link name="footAssembly">
+    <visual>
+      <geometry>
+        <mesh filename="package://rrbot_description/meshes/footassembly.dae"/>
+      </geometry>
+      <origin xyz="0 0 0" rpy="0 0 3.1415926535897931"/>
+    </visual>
+    <collision>
+      <geometry>
+        <mesh filename="package://rrbot_description/meshes/footassembly.dae"/>
+      </geometry>
+      <origin xyz="0 0 0" rpy="0 0 3.1415926535897931"/>
+    </collision>
+    <inertial>
+      <mass value="0.02883033104"/>
+      <inertia ixx="0.00757" ixy="0.0" ixz="0.0" iyy="0.212" iyz="0.0" izz="0.21199"/>
+    </inertial>
+  </link>
+
+  <joint name="footAssembly_to_leg1_footBracket" type="revolute">
+    <axis xyz="0 0 1"/>
+    <limit effort="1000.0" lower="-3.1415926535897931" upper="3.1415926535897931" velocity="0"/>
+    <origin xyz="0 0.01159 0" rpy="0 0 0"/>
+    <child link="footAssembly"/>
+    <parent link="leg1_footBracket"/>
+  </joint> -->
+
   <!-- GAZEBO PLUGIN -->
 <!-- <gazebo>
   <plugin name="gazebo_ros_control" filename="libgazebo_ros_control.so">

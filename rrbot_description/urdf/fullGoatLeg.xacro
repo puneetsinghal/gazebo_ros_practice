@@ -10,26 +10,26 @@
   <!-- Import Rviz colors -->
 	<xacro:include filename="$(find rrbot_description)/urdf/openGoatLeg.xacro" />
 
-	<link name="world" />
+<!-- 	<link name="world" />
 
 	<joint name="world_joint" type="fixed">
 		<parent link="world" />
 		<child link = "hipJoint" />
 		<origin xyz="0.0 0.0 1" rpy="0.0 0.0 0.0" />
-	</joint>
+	</joint> -->
 
 	<link name="footAssembly">
 		<visual>
 			<geometry>
 				<mesh filename="package://rrbot_description/meshes/footassembly.dae"/>
 			</geometry>
-			<origin xyz="0 0 0" rpy="0 0 ${PI}"/>
+			<origin xyz="0 0 0" rpy="0 0 3.1415926535897931"/>
 		</visual>
 		<collision>
 			<geometry>
 				<mesh filename="package://rrbot_description/meshes/footassembly.dae"/>
 			</geometry>
-			<origin xyz="0 0 0" rpy="0 0 ${PI}"/>
+			<origin xyz="0 0 0" rpy="0 0 3.1415926535897931"/>
 		</collision>
 		<inertial>
 			<mass value="0.02883033104"/>
@@ -37,12 +37,20 @@
 		</inertial>
   	</link>
 
-  	<joint name="footBracket_to_footAssembly" type="revolute">
+  	<joint name="footAssembly_to_leg1_footBracket" type="revolute">
 		<axis xyz="0 0 1"/>
-		<limit effort="1000.0" lower="${-PI}" upper="${PI}" velocity="0"/>
+		<limit effort="1000.0" lower="-3.1415926535897931" upper="3.1415926535897931" velocity="0"/>
 		<origin xyz="0 0.01159 0" rpy="0 0 0"/>
+		<child link="footAssembly"/>
 		<parent link="leg1_footBracket"/>
-		<child link="leg2_footBracket"/>
   	</joint>
+
+  	<!-- <joint name="footAssembly_to_leg2_footBracket" type="revolute">
+		<axis xyz="0 0 1"/>
+		<limit effort="1000.0" lower="-3.1415926535897931" upper="3.1415926535897931" velocity="0"/>
+		<origin xyz="0 0.01159 0" rpy="0 0 0"/>
+		<child link="footAssembly"/>
+		<parent link="leg2_footBracket"/>
+  	</joint> -->
 
 </robot>

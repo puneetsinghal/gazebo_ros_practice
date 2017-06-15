@@ -1,0 +1,243 @@
+<?xml version="1.0"?>
+<!-- Revolute-Revolute Manipulator -->
+<robot name="rrbot">
+
+  <link name="leg1_pipebetweenhipandmotormountingbracket">
+      <visual>
+        <geometry>
+          <mesh filename="package://rrbot_description/meshes/pipebetweenhipandmotormountingbracket.dae"/>
+        </geometry>
+        <origin xyz="0 0 0" rpy="0 0 -1.570"/>
+      </visual>
+      <collision>
+        <geometry>
+          <mesh filename="package://rrbot_description/meshes/pipebetweenhipandmotormountingbracket.dae"/>
+        </geometry>
+        <origin xyz="0 0 0" rpy="0 0 -1.570"/>
+      </collision>
+      <inertial>
+        <origin xyz="-0.077506068 -0.001193546 -0.369502182" rpy="0 0 0"/>
+        <mass value="0.02883033104"/>
+        <inertia ixx="0.00757" ixy="0.0" ixz="0.0" iyy="0.212" iyz="0.0" izz="0.21199"/>
+      </inertial>
+    </link>
+
+  <link name="leg1_motormountingbracket_fixed">
+    <visual>
+      <geometry>
+        <mesh filename="package://rrbot_description/meshes/motormountingbracket_fixed.dae"/>
+      </geometry>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+    </visual>
+    <collision>
+      <geometry>
+        <mesh filename="package://rrbot_description/meshes/motormountingbracket_fixed.dae"/>
+      </geometry>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+    </collision>
+    <inertial>
+      <origin xyz="-0.077506068 -0.001193546 -0.369502182" rpy="0 0 0"/>
+      <mass value="0.02883033104"/>
+      <inertia ixx="0.00757" ixy="0.0" ixz="0.0" iyy="0.212" iyz="0.0" izz="0.21199"/>
+    </inertial>
+  </link>
+
+    <!-- <link name="leg1_upper_leg_bracket">
+      <visual>
+        <geometry>
+          <mesh filename="package://rrbot_description/meshes/upper_leg_bracket.dae"/>
+        </geometry>
+        <origin xyz="0 0 0" rpy="0 0 1.570"/>
+      </visual>
+      <collision>
+        <geometry>
+          <mesh filename="package://rrbot_description/meshes/upper_leg_bracket.dae"/>
+        </geometry>
+        <origin xyz="0 0 0" rpy="0 0 1.570"/>
+      </collision>
+      <inertial>
+        <origin xyz="-0.077506068 -0.001193546 -0.369502182" rpy="0 0 0"/>
+        <mass value="0.02883033104"/>
+        <inertia ixx="0.00757" ixy="0.0" ixz="0.0" iyy="0.212" iyz="0.0" izz="0.21199"/>
+      </inertial>
+    </link>
+
+      <link name="leg1_upper_leg">
+      <visual>
+        <geometry>
+          <mesh filename="package://rrbot_description/meshes/upper_leg.dae"/>
+        </geometry>
+        <origin xyz="0 0 0" rpy="0 0 -1.570"/>
+      </visual>
+      <collision>
+        <geometry>
+          <mesh filename="package://rrbot_description/meshes/upper_leg.dae"/>
+        </geometry>
+        <origin xyz="0 0 0" rpy="0 0 -1.570"/>
+      </collision>
+      <inertial>
+        <origin xyz="-0.077506068 -0.001193546 -0.369502182" rpy="0 0 0"/>
+        <mass value="0.02883033104"/>
+        <inertia ixx="0.00757" ixy="0.0" ixz="0.0" iyy="0.212" iyz="0.0" izz="0.21199"/>
+      </inertial>
+    </link>
+
+    <link name="leg1_eyeJoint">
+      <visual>
+        <geometry>
+          <mesh filename="package://rrbot_description/meshes/eye_joint.dae"/>
+        </geometry>
+        <origin xyz="0 0 0" rpy="0 0 1.570"/>
+      </visual>
+      <collision>
+        <geometry>
+          <mesh filename="package://rrbot_description/meshes/eye_joint.dae"/>
+        </geometry>
+        <origin xyz="0 0 0" rpy="0 0 1.570"/>
+      </collision>
+      <inertial>
+        <origin xyz="-0.077506068 -0.001193546 -0.369502182" rpy="0 0 0"/>
+        <mass value="0.02883033104"/>
+        <inertia ixx="0.00757" ixy="0.0" ixz="0.0" iyy="0.212" iyz="0.0" izz="0.21199"/>
+      </inertial>
+    </link>
+
+    <link name="leg1_sphericalJointMiddleLink">
+      <visual>
+        <geometry>
+          <mesh filename="package://rrbot_description/meshes/spherical_joint_middle_piece.dae"/>
+        </geometry>
+        <origin xyz="0 0 0" rpy="0 0 1.570"/>
+      </visual>
+      <collision>
+        <geometry>
+          <mesh filename="package://rrbot_description/meshes/spherical_joint_middle_piece.dae"/>
+        </geometry>
+        <origin xyz="0 0 0" rpy="0 0 1.570"/>
+      </collision>
+      <inertial>
+        <origin xyz="-0.077506068 -0.001193546 -0.369502182" rpy="0 0 0"/>
+        <mass value="0.02883033104"/>
+        <inertia ixx="0.00757" ixy="0.0" ixz="0.0" iyy="0.212" iyz="0.0" izz="0.21199"/>
+      </inertial>
+    </link>
+
+    <link name="leg1_bendElbow">
+      <visual>
+        <geometry>
+          <mesh filename="package://rrbot_description/meshes/elbow_bend.dae"/>
+        </geometry>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+      </visual>
+      <collision>
+        <geometry>
+          <mesh filename="package://rrbot_description/meshes/elbow_bend.dae"/>
+        </geometry>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+      </collision>
+      <inertial>
+        <origin xyz="-0.077506068 -0.001193546 -0.369502182" rpy="0 0 0"/>
+        <mass value="0.02883033104"/>
+        <inertia ixx="0.00757" ixy="0.0" ixz="0.0" iyy="0.212" iyz="0.0" izz="0.21199"/>
+      </inertial>
+    </link>
+
+    <link name="leg1_lowerLeg">
+      <visual>
+        <geometry>
+          <mesh filename="package://rrbot_description/meshes/lower_leg.dae"/>
+        </geometry>
+        <origin xyz="0 0 0" rpy="0 0 -1.570"/>
+      </visual>
+      <collision>
+        <geometry>
+          <mesh filename="package://rrbot_description/meshes/lower_leg.dae"/>
+        </geometry>
+        <origin xyz="0 0 0" rpy="0 0 -1.570"/>
+      </collision>
+      <inertial>
+        <origin xyz="-0.077506068 -0.001193546 -0.369502182" rpy="0 0 0"/>
+        <mass value="0.02883033104"/>
+        <inertia ixx="0.00757" ixy="0.0" ixz="0.0" iyy="0.212" iyz="0.0" izz="0.21199"/>
+      </inertial>
+    </link>
+
+    <link name="leg1_footBracket">
+      <visual>
+        <geometry>
+          <mesh filename="package://rrbot_description/meshes/foot_bracket.dae"/>
+        </geometry>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+      </visual>
+      <collision>
+        <geometry>
+          <mesh filename="package://rrbot_description/meshes/foot_bracket.dae"/>
+        </geometry>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+      </collision>
+      <inertial>
+        <origin xyz="-0.077506068 -0.001193546 -0.369502182" rpy="0 0 0"/>
+        <mass value="0.02883033104"/>
+        <inertia ixx="0.00757" ixy="0.0" ixz="0.0" iyy="0.212" iyz="0.0" izz="0.21199"/>
+      </inertial>
+    </link> -->
+
+    <!-- JOINTS -->
+
+    <joint name="leg1_pipebetweenhipandmotormountingbracket_to_motor" type="fixed">
+      <parent link="leg1_pipebetweenhipandmotormountingbracket"/>
+      <child link="leg1_motormountingbracket_fixed"/>
+      <origin xyz="0.03073 0 0" rpy="-1.570 0 0"/>
+    </joint>
+
+    <!-- <joint name="leg1_motorMoutingBracket_to_upperLegBracket" type="revolute">
+      <axis xyz="0 0 1"/>
+      <limit effort="1000.0" lower="-1.570" upper="1.570" velocity="0"/>
+      <origin xyz="0.00864 0.06680 0.01267" rpy="0 0 0"/>
+      <parent link="leg1_motormountingbracket_fixed"/>
+      <child link="leg1_upper_leg_bracket"/>
+    </joint>
+
+    <joint name="leg1_upperLegBracket_to_upperLink" type="fixed">
+      <parent link="leg1_upper_leg_bracket"/>
+      <child link="leg1_upper_leg"/>
+      <origin xyz="0.05166 0 -0.01150" rpy="0 0 0"/>
+    </joint>
+
+    <joint name="leg1_upperLeg_to_eyeJoint" type="revolute">
+      <axis xyz="1 0 0"/>
+      <limit effort="1000.0" lower="-3.14" upper="3.14" velocity="0"/>
+      <origin xyz="0.09885 0 0" rpy="0 0 0"/>
+      <parent link="leg1_upper_leg"/>
+      <child link="leg1_eyeJoint"/>
+    </joint>
+
+    <joint name="leg1_eyeJoint_to_sphericalJointMiddleLink" type="revolute">
+      <axis xyz="0 0 1"/>
+      <limit effort="1000.0" lower="-1.570" upper="1.570" velocity="0"/>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <parent link="leg1_eyeJoint"/>
+      <child link="leg1_sphericalJointMiddleLink"/>
+    </joint>
+
+    <joint name="leg1_sphericalJointMiddleLink_to_bendElbow" type="revolute">
+      <axis xyz="1 0 0"/>
+      <limit effort="1000.0" lower="-3.14" upper="3.14" velocity="0"/>
+      <origin xyz="0.01916 0 0" rpy="0 0 0"/>
+      <parent link="leg1_sphericalJointMiddleLink"/>
+      <child link="leg1_bendElbow"/>
+    </joint>
+
+    <joint name="leg1_bendElbow_to_lowerLeg" type="fixed">
+      <parent link="leg1_bendElbow"/>
+      <child link="leg1_lowerLeg"/>
+      <origin xyz="0.06170 0.01192 0" rpy="0 0 0.7"/>
+    </joint>
+
+    <joint name="leg1_lowerLeg_footBracket" type="fixed">
+      <parent link="leg1_lowerLeg"/>
+      <child link="leg1_footBracket"/>
+      <origin xyz="0.26032 0 0" rpy="0 0 0"/>
+    </joint> -->
+
+</robot>

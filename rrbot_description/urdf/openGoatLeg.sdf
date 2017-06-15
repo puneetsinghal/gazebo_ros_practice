@@ -1,0 +1,41 @@
+<sdf version='1.4'>
+  <model name='rrbot'>
+    <link name='hipJoint'>
+      <pose>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose>0 0 0 0 -0 0</pose>
+        <mass>0.0288303</mass>
+        <inertia>
+          <ixx>0.00757</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>0.212</iyy>
+          <iyz>0</iyz>
+          <izz>0.21199</izz>
+        </inertia>
+      </inertial>
+      <collision name='hipJoint_collision'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://rrbot_description/meshes/singleleghipjoint.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='hipJoint_visual'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://rrbot_description/meshes/singleleghipjoint.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <velocity_decay>
+        <linear>0</linear>
+        <angular>0</angular>
+      </velocity_decay>
+    </link>
+  </model>
+</sdf>
